@@ -12,7 +12,8 @@ install_ext () {
     if [[ -f "$ext_ini" ]]; then
         ext_so=$(php -r '$ini=parse_ini_file("'$ext_ini'"); echo $ext=$ini["zend_extension"]?:$ini["extension"]; exit((int)empty($ext));') # read .so name from .ini because e.g. opcache.so is named "zend-opcache"
         if [[ ! -f "$ext_dir/$ext_so" ]]; then
-            warning_inline "Unknown extension ${ext} (${reason}), install may fail!"
+            warning_inline "Unknown extension ${ext} (${reason}), install may fail!!"
+            warning_inline "Not found in ${ext_dir}"
         else
             echo "- ext-${ext} (${reason})" | indent
             cp "${ext_ini}" "${BUILD_DIR}/.heroku/php/etc/php/conf.d"
