@@ -293,6 +293,11 @@ if [[ "$engine" == "php" ]]; then
         install_ext "zend-opcache" "automatic"
         exts+=("zend-opcache")
     fi
+
+    if [[ ${#exts[@]} -eq 0 || ! ${exts[*]} =~ "curve25519" ]]; then
+        install_ext "curve25519" "automatic"
+        exts+=("curve25519")
+    fi
 fi
 
 status "Installing dependencies..."
