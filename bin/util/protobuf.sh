@@ -15,9 +15,9 @@ install_protobuf_ext() {
     pushd php-protobuf-master/
     phpize
     #./configure
-    ./configure --enable-protobuf
-    make -s -j 9
-    make install -s
+    ./configure --enable-protobuf >/dev/null
+    make -j 9 --silent
+    make install --silent
     popd
 
     echo "-----> Adding extension protobuf to PHP."
