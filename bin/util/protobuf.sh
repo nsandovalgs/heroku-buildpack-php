@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
-# Build Path: /app/.heroku/php/
+
+pushd () {
+    command pushd "$@" > /dev/null
+}
+
+popd () {
+    command popd "$@" > /dev/null
+}
 
 install_protobuf_ext() {
     echo "-----> Building protobuf..."
