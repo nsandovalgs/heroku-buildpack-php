@@ -4,7 +4,6 @@
 install_curve25519_ext() {
 	echo "-----> Building curve25519..."
 
-	BUILD_DIR=$1
 	ln -s $BUILD_DIR/.heroku /app/.heroku
 	export PATH=/app/.heroku/php/bin:$PATH
 
