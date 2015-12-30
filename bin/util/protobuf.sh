@@ -13,10 +13,9 @@ install_protobuf_ext() {
 
     curl --silent -L https://codeload.github.com/allegro/php-protobuf/tar.gz/master | tar xz
     pushd php-protobuf-master/
-    phpize
-    #./configure
+    phpize >/dev/null
     ./configure --enable-protobuf >/dev/null
-    make -j 9 --silent
+    make -j 9 --silent >/dev/null
     make install --silent
     popd
 
