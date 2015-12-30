@@ -435,6 +435,9 @@ install_newrelic_userini
 # add curve25519 support
 source $BP_DIR/bin/util/curve25519.sh
 
+# add protobuf support
+source $BP_DIR/bin/util/protobuf.sh
+
 # export for multi buildpack
 cat > $BP_DIR/export <<"EOF"
 export PATH="/app/.heroku/php/bin:/app/.heroku/php/sbin:$PATH"
