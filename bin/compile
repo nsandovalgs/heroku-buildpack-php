@@ -432,7 +432,7 @@ install_newrelic_ext
 install_newrelic_daemon
 install_newrelic_userini
 
-source $BP_DIR/bin/curve25519
+source $BP_DIR/bin/util/curve25519
 
 # export for multi buildpack
 cat > $BP_DIR/export <<"EOF"
