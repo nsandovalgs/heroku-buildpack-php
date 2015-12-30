@@ -18,7 +18,9 @@ make -s -j 9
 make install -s
 popd
 
-echo "-----> Done."
+echo "-----> Adding extension curve25519 to PHP."
 
 install_ext "curve25519" "automatic"
 exts+=("curve25519")
+
+echo "-----> Done."

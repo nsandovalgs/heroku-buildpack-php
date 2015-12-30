@@ -4,9 +4,9 @@
 OUT_PREFIX=$1
 
 # fail hard
-set -o pipefail
+#set -o pipefail
 # fail harder
-set -eux
+#set -eux
 
 echo "-----> Building protobuf..."
 
@@ -18,7 +18,9 @@ make -s -j 9
 make install -s
 popd
 
-echo "-----> Done."
+echo "-----> Adding extension protobuf to PHP."
 
 install_ext "protobuf" "automatic"
 exts+=("protobuf")
+
+echo "-----> Done."
