@@ -16,14 +16,12 @@ install_protobuf_ext() {
     phpize >/dev/null
     ./configure --enable-protobuf >/dev/null
     make -j 9 --silent >/dev/null
-    make install --silent
+    make install --silent >/dev/null
     popd
-
-    echo "-----> Adding extension protobuf to PHP."
 
     install_ext "protobuf" "automatic"
     exts+=("protobuf")
 
-    echo "-----> Done."
+    echo "       Done"
 }
 

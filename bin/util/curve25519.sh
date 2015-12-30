@@ -16,13 +16,11 @@ install_curve25519_ext() {
 	phpize >/dev/null
 	./configure --enable-curve25519 >/dev/null
 	make -j 9 --silent >/dev/null
-	make install --silent
+	make install --silent >/dev/null
 	popd
-
-	echo "-----> Adding extension curve25519 to PHP."
 
 	install_ext "curve25519" "automatic"
 	exts+=("curve25519")
 
-	echo "-----> Done."
+	echo "       Done"
 }
