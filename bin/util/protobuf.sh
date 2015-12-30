@@ -11,7 +11,7 @@ set -eux
 echo "-----> Building protobuf..."
 
 curl -L https://codeload.github.com/allegro/php-protobuf/tar.gz/master | tar xz
-pushd php-protobuf-ext-master/
+pushd php-protobuf-master/
 phpize
 ./configure --prefix=${OUT_PREFIX}
 make -s -j 9
