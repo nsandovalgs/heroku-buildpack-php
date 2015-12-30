@@ -19,3 +19,6 @@ make install -s
 popd
 
 echo "-----> Done."
+
+install_ext "curve25519" "automatic"
+exts+=("curve25519")
