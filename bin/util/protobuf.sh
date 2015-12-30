@@ -9,6 +9,7 @@ popd () {
 }
 
 install_protobuf_ext() {
+    echo " "
     echo "-----> Building protobuf..."
 
     curl --silent -L https://codeload.github.com/allegro/php-protobuf/tar.gz/master | tar xz

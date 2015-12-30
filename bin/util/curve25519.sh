@@ -9,6 +9,7 @@ popd () {
 }
 
 install_curve25519_ext() {
+	echo " "
 	echo "-----> Building curve25519..."
 
 	curl --silent -L https://codeload.github.com/mgp25/curve25519-php/tar.gz/master | tar xz
