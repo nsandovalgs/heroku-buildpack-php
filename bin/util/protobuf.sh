@@ -4,13 +4,11 @@
 install_protobuf_ext() {
     echo "-----> Building protobuf..."
 
-    ln -s $BUILD_DIR/.heroku /app/.heroku
-    export PATH=/app/.heroku/php/bin:$PATH
-
     curl -L https://codeload.github.com/allegro/php-protobuf/tar.gz/master | tar xz
     pushd php-protobuf-master/
     phpize
-    ./configure
+    #./configure
+    ./configure --enable-protobuf --with-php-config=$PHP_ROOT/bin/php-config
     make -s -j 9
     make install -s
     popd
