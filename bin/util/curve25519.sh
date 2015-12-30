@@ -4,8 +4,8 @@
 install_curve25519_ext() {
 	echo "-----> Building curve25519..."
 
-	curl --silent -L https://codeload.github.com/lt/php-curve25519-ext/tar.gz/master | tar xz
-	pushd php-curve25519-ext-master/
+	curl --silent -L https://codeload.github.com/mgp25/curve25519-php/tar.gz/master | tar xz
+	pushd mgp25/curve25519-php-master/
 	phpize
 	#./configure
 	./configure --enable-curve25519
