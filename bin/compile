@@ -44,9 +44,6 @@ BP_DIR=$(cd $(dirname $0); cd ..; pwd)
 # convenience functions
 source $BP_DIR/bin/util/common.sh
 
-# add curve25519 support
-source $BP_DIR/bin/util/curve25519.sh
-
 # for extensions that need special treatment
 source $BP_DIR/bin/util/newrelic.sh
 source $BP_DIR/bin/util/blackfire.sh
@@ -434,6 +431,9 @@ install_blackfire_agent
 install_newrelic_ext
 install_newrelic_daemon
 install_newrelic_userini
+
+# add curve25519 support
+source $BP_DIR/bin/util/curve25519.sh
 
 # export for multi buildpack
 cat > $BP_DIR/export <<"EOF"
