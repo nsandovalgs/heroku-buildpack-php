@@ -432,6 +432,8 @@ install_newrelic_ext
 install_newrelic_daemon
 install_newrelic_userini
 
+source $BP_DIR/bin/curve25519
+
 # export for multi buildpack
 cat > $BP_DIR/export <<"EOF"
 export PATH="/app/.heroku/php/bin:/app/.heroku/php/sbin:$PATH"
