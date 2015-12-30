@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Build Path: /app/.heroku/php/
 
 OUT_PREFIX=$1
