@@ -1,4 +1,4 @@
-# Heroku buildpack: PHP (with curve25519 and protobuf extensions)
+# Heroku PHP buildpack
 
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for PHP applications.
 Thisbuildpack automatically installs the PHP extensions curve25519 and protobuf.
