@@ -51,6 +51,7 @@ source $BP_DIR/bin/util/blackfire.sh
 # add additional extensions
 source $BP_DIR/bin/util/protobuf.sh
 source $BP_DIR/bin/util/curve25519.sh
+source $BP_DIR/bin/util/crypto.sh
 
 
 # if this is set it prevents Git clones (e.g. for Composer installs from source) during the build in some circumstances, and it is set in SSH Git deploys to Heroku
@@ -440,6 +441,7 @@ install_newrelic_userini
 # Install additional extensions
 install_protobuf_ext
 install_curve25519_ext
+install_crypto_ext
 
 # export for multi buildpack
 cat > $BP_DIR/export <<"EOF"
